@@ -218,7 +218,7 @@ h1 {
     .search-bar { width: 80%; }
 }
 
-/* 新增：按钮闪烁动画 */
+/* 按钮闪烁动画 */
 @keyframes flashHighlight {
     0%, 100% { background: transparent; box-shadow: none; }
     50% { background: #0078D4; box-shadow: 0 0 15px rgba(0,120,212,0.8); }
@@ -268,7 +268,7 @@ const startText = document.getElementById('startText');
 const timeDisplay = document.getElementById('timeDisplay');
 let animationTimeout = null;
 
-// 清理动画，支持动画打断
+// 动画打断
 function clearAnimations() {
     if (animationTimeout) clearTimeout(animationTimeout);
     menu.style.animation = "none";
@@ -334,7 +334,7 @@ updateTime();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 点击“单击按钮开始” → 先闪烁按钮 → 再展开菜单 (仅第一次生效)
+// 点击“单击按钮开始” 
 let startTextClicked = false;
 startText.addEventListener('click', () => {
     if (startTextClicked) return;
